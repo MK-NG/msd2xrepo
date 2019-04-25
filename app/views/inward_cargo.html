@@ -1,0 +1,99 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/inorout.html" class="govuk-back-link">Back</a>
+<div class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Inward Cargo
+                    </h1>
+                  </legend>
+                  <span class="govuk-caption-m"> Reporting Port</span>
+                  <p class="govuk-body">South Bank / UNITED KINGDOM  (GB215) </p>
+                  <span class="govuk-caption-m"> Year</span>
+                  <p class="govuk-body">2019</p>
+                  <br/>
+                  <p class="govuk-body">Enter figures for inward cargo for any roll on / roll off (self-propelled) products</p>
+                </br>
+                <h2 class="govuk-heading-m">Load on / Load off containers</h2>
+                <div class="govuk-form-group">
+                        <label class="govuk-label" for="event-name">
+                          20 foot freight units
+                        </label>
+                        <label class="govuk-hint">Total number of units with cargo</label>
+                        <input class="govuk-input" id="event-name" name="event-name" type="number">
+                      <br/>
+                      <br/>
+                        <label class="govuk-hint">Total number of units without cargo</label>
+                        <input class="govuk-input" id="event-name" name="event-name" type="number">
+                        <br/>
+                        <br/>
+                          <label class="govuk-hint">Gross weight of goods</label>
+                          <input class="govuk-input" id="event-name" name="event-name" type="number">
+                      </div>
+                      <div class="govuk-form-group">
+                            <label class="govuk-label" for="event-name">
+                              More than 20 foot and less than 40 foot freight units
+                            </label>
+                            <label class="govuk-hint">Total number of units</label>
+                            <input class="govuk-input" id="event-name" name="event-name" type="text">
+                            <br/>
+                            <br/>
+                              <label class="govuk-hint">Total number of units without cargo</label>
+                              <input class="govuk-input" id="event-name" name="event-name" type="number">
+                              <br/>
+                        <br/>
+                          <label class="govuk-hint">Gross weight of goods</label>
+                          <input class="govuk-input" id="event-name" name="event-name" type="number">
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="event-name">
+                              40 foot freight units
+                            </label>
+                            <label class="govuk-hint">Total number of units</label>
+                            <input class="govuk-input" id="event-name" name="event-name" type="text">
+                            <br/>
+                            <br/>
+                              <label class="govuk-hint">Total number of units without cargo</label>
+                              <input class="govuk-input" id="event-name" name="event-name" type="number">
+                              <br/>
+                        <br/>
+                          <label class="govuk-hint">Gross weight of goods</label>
+                          <input class="govuk-input" id="event-name" name="event-name" type="number">
+                          </div>
+                          <div class="govuk-form-group">
+                            <label class="govuk-label" for="event-name">
+                              More than 40 foot freight units
+                            </label>
+                            <label class="govuk-hint">Total number of units</label>
+                            <input class="govuk-input" id="event-name" name="event-name" type="text">
+                            <br/>
+                            <br/>
+                              <label class="govuk-hint">Total number of units without cargo</label>
+                              <input class="govuk-input" id="event-name" name="event-name" type="number">
+                              <br/>
+                        <br/>
+                          <label class="govuk-hint">Gross weight of goods</label>
+                          <input class="govuk-input" id="event-name" name="event-name" type="number">
+                          </div>
+            </div>
+            
+            <a href="/summary" role="button" class="govuk-button">
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

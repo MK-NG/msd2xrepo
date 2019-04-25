@@ -1,0 +1,42 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/Dashboard" class="govuk-back-link">Back</a>
+<div class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <h1 class="govuk-heading-xl">
+               Annual port traffic return
+            </h1>
+           <h2 class="govuk-heading-l">Before you start</h2>
+            <p class="govuk-body-l">You will need:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>cargos by type</li>
+                <li>number of units with and without cargo</li>
+                <li>gross weight of goods </li>
+            </ul>
+
+            <a href="/inorout1" role="button" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8">
+                Start now
+            </a>
+            <div class="govuk-form-group">
+                <h3 class="govuk-heading-m">More information</h3>
+                <p class="govuk-body">
+                    This information is needed to ensure the Department of Transport can make accurate estimates of
+                    maritime traffic to inform policy decisions. The statistics are also required by
+                    <a target="_blank" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:31995L0064">EU legislation. <span class="govuk-visually-hidden">link opens in a new window</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

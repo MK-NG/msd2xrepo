@@ -1,0 +1,213 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/inorout.html" class="govuk-back-link">Back</a>
+<div class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Choose your cargo categories
+                    </h1>
+                  </legend>
+                  <span class="govuk-caption-m"> Reporting Port</span>
+                  <p class="govuk-body">South Bank / UNITED KINGDOM  (GB215) </p>
+                  <span class="govuk-caption-m"> Year</span>
+                  <p class="govuk-body">2019</p>
+                  <br/>
+                  <p class="govuk-body">Please choose the categories of cargo handled by the port this year and enter the relevant information. If you do not know which category your cargo belongs to, <a href="#">check our cargo categorisation help page</a></p>
+                  <h2 class="govuk-heading-m">
+                    Load on / Load off containers
+                  </h2>
+                  
+<div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            20 foot freight units
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+          <label class="govuk-hint">Total number of units with cargo</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+        <br/>
+        <br/>
+          <label class="govuk-hint">Total number of units without cargo</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+        <br/>
+        <br/>
+          <label class="govuk-hint">Gross weight of goods</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+     
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+            More than 20 foot and less than 40 foot freight units
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <label class="govuk-hint">Total number of units with cargo</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+        <br/>
+        <br/>
+          <label class="govuk-hint">Total number of units without cargo</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+        <br/>
+        <br/>
+          <label class="govuk-hint">Gross weight of goods</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+         40 foot freight units
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+        <label class="govuk-hint">Total number of units with cargo</label>
+        <input class="govuk-input" id="event-name" name="event-name" type="number">
+      <br/>
+      <br/>
+        <label class="govuk-hint">Total number of units without cargo</label>
+        <input class="govuk-input" id="event-name" name="event-name" type="number">
+      <br/>
+      <br/>
+        <label class="govuk-hint">Gross weight of goods</label>
+        <input class="govuk-input" id="event-name" name="event-name" type="number">
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+            More than 40 foot units
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+        <label class="govuk-hint">Total number of units with cargo</label>
+        <input class="govuk-input" id="event-name" name="event-name" type="number">
+      <br/>
+      <br/>
+        <label class="govuk-hint">Total number of units without cargo</label>
+        <input class="govuk-input" id="event-name" name="event-name" type="number">
+    </div>
+  </div>
+
+</div>
+                  
+
+
+<h2 class="govuk-heading-m">
+    Roll on / Roll off (self-propelled)
+</h2>
+<div class="govuk-accordion" data-module="accordion" id="accordion-default">
+
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+              Road goods vehicles with or without accompanying trailers
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <label class="govuk-hint">Total number of units</label>
+            <input class="govuk-input" id="event-name" name="event-name" type="number">
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+              Passenger cars, motorcycles and accompanying trailers/caravans
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+          <label class="govuk-hint">Total number of units</label>
+            <input class="govuk-input" id="event-name" name="event-name" type="number">
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+              Passenger buses
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+          <label class="govuk-hint">Total number of units</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+      <div class="govuk-accordion__section-header">
+        <h2 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+              Import/export motor vehicles
+          </span>
+        </h2>
+      </div>
+      <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+          <label class="govuk-hint">Total number of units</label>
+          <input class="govuk-input" id="event-name" name="event-name" type="number">
+      </div>
+    </div>
+    <div class="govuk-accordion__section ">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                Live animals on the hoof
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-5" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-5">
+            <label class="govuk-hint">Total number of units</label>
+            <input class="govuk-input" id="event-name" name="event-name" type="number">
+        </div>
+      </div>
+      <div class="govuk-accordion__section ">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-6">
+                  Other mobile self-propelled vehicles
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-7">
+              <label class="govuk-hint">Total number of units </label>
+              <input class="govuk-input" id="event-name" name="event-name" type="number">
+          </div>
+        </div>
+  </div>                     
+            </div>
+            
+            <a href="/summary" role="button" class="govuk-button">
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,251 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<a href="/inorout.html" class="govuk-back-link">Back</a>
+<div class="govuk-main-wrapper">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                    <h1 class="govuk-fieldset__heading">
+                      Choose your cargo categories
+                    </h1>
+                  </legend>
+                  <span class="govuk-caption-m"> Reporting Port</span>
+                  <p class="govuk-body">South Bank / UNITED KINGDOM  (GB215) </p>
+                  <span class="govuk-caption-m"> Year</span>
+                  <p class="govuk-body">2019</p>
+                  <br/>
+                  <p class="govuk-body">Please choose the categories of cargo handled by the port this year. If you do not know which category your cargo belongs to, <a href="#">check our cargo categorisation help page</a></p>
+                  <h2 class="govuk-heading-m">
+                    Load on / Load off containers
+                  </h2>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                        20 foot freight units
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        More than 20 foot and less than 40 foot freight units
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                         40 foot freight units
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                          More than 40 foot units
+                        </label>
+                      </div>
+                  </div>
+                </div>
+</fieldset>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                  <h2 class="govuk-heading-m">
+                    Roll on / Roll off (self-propelled)
+                  </h2>
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                        Road goods vehicles with or without accompanying trailers
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        Passenger cars, motorcycles and accompanying trailers/caravans
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                         Passenger buses
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                          Import/export motor vehicles
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-5" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-5">
+                          Live animals on the hoof
+                        </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-6" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-6">
+                            Other mobile self-propelled vehicles
+                        </label>
+                    </div>
+                </div>
+
+</fieldset>
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+                      <h2 class="govuk-heading-m">
+                        Roll on / roll off (non self-propelled)
+                      </h2>
+                      <div class="govuk-checkboxes">
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                            Unaccompanied road goods trailers and semi-trailers
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                            Unaccompanied caravans and other road, agricultural and industrial vehicles 
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                             Rail wagons, shipborne port to port trailers, and shipborne barges engaged in goods transport
+                          </label>
+                        </div>
+                        <div class="govuk-checkboxes__item">
+                            <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                            <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                              Other mobile non self-propelled units
+                            </label>
+                          </div>
+                      </div>
+</fieldset>
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+                      <h2 class="govuk-heading-m">
+                           Liquid bulk
+                          </h2>
+                          <div class="govuk-checkboxes">
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                              <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                Liquefied gas
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                               Crude oil
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                 Oil products
+                              </label>
+                            </div>
+                            <div class="govuk-checkboxes__item">
+                                <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                                <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                                  Other liquid bulk products
+                                </label>
+                              </div>
+                          </div>
+</fieldset>
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                          <h2 class="govuk-heading-m">
+                                Dry bulk
+                               </h2>
+                               <div class="govuk-checkboxes">
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                                   <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                    Ores (including scrap metal)
+                                   </label>
+                                 </div>
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                   <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Coal
+                                   </label>
+                                 </div>
+                                 <div class="govuk-checkboxes__item">
+                                   <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                   <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                      Agricultural products (e.g. grain, soya, tapioca)
+                                   </label>
+                                 </div>
+                                 <div class="govuk-checkboxes__item">
+                                     <input class="govuk-checkboxes__input" id="waste-4" name="waste" type="checkbox" value="farm">
+                                     <label class="govuk-label govuk-checkboxes__label" for="waste-4">
+                                       Other dry bulk products
+                                     </label>
+                                   </div>
+                               </div>
+
+</fieldset>
+</div>
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                               <h2 class="govuk-heading-m">
+                                    Other general cargo (including contrainers less than 20 foot)
+                                   </h2>
+                                   <div class="govuk-checkboxes">
+                                     <div class="govuk-checkboxes__item">
+                                       <input class="govuk-checkboxes__input" id="waste-1" name="waste" type="checkbox" value="carcasses">
+                                       <label class="govuk-label govuk-checkboxes__label" for="waste-1">
+                                         Forestry products
+                                       </label>
+                                     </div>
+                                     <div class="govuk-checkboxes__item">
+                                       <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                       <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                        Iron and steel products
+                                       </label>
+                                     </div>
+                                     <div class="govuk-checkboxes__item">
+                                       <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                                       <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                                          Other general cargo and containers less than 20 foot
+                                       </label>
+                                     </div>
+                                    
+                                   </div>
+
+
+
+                </fieldset>
+
+
+                
+                
+                
+            </div>
+            
+            <a href="/inward_cargo" role="button" class="govuk-button">
+                Continue
+            </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
