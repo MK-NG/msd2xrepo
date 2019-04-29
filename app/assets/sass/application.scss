@@ -3,6 +3,7 @@ $govuk-global-styles: true;
 
 // Import GOV.UK Frontend and any extension styles if extensions have been configured
 @import "lib/extensions/extensions";
+@import "app/assets/css/drop-down";
 
 // Patterns that aren't in Frontend
 @import "patterns/step-by-step-navigation";
