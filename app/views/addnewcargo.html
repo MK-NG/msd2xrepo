@@ -1,0 +1,309 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<main id="main" tabindex="-1">
+    <div class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <span class="govuk-caption-l">Step 4 of 5</span>
+
+                <h1 class="govuk-heading-l"></h1>
+                <span class="govuk-caption-m">Vessel deadweight</span>
+                <p class="govuk-body-m" id="_hVesselName">Vessel Name</p>
+                    <span class="govuk-caption-m">Port of loading</span>
+                    <p class="govuk-body"> Newcastle</p>
+                    <span class="govuk-caption-m">Port of discharge</span> 
+                <p class="govuk-body-m" id="_hVesselName">Newport</p>
+                <br />
+                <form method="post">
+                    <div class="govuk-form-group" id="_divDirection">
+                        <h2 class="govuk-heading-m">
+                            Type of cargo<br />
+                            <span class="govuk-hint">Select a cargo group and cargo category</span>
+                        </h2>
+                    </div>
+                    <div class="govuk-form-group">
+                        <h2 class="govuk-heading-s">
+                            <a asp-page="CargoUserHelp">How should I categorise my cargo?</a>
+                        </h2>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" asp-for="CargoItem.Group">
+                            Cargo group
+                        </label>
+                        <span asp-validation-for="@Model.CargoItem.Group" class="govuk-error-message"></span>
+                        <select asp-for="CargoItem.Group" class="govuk-select" asp-items="@Model.CargoGroup" id="CargoItem_Group">
+                            <option value="">Please Select</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" asp-for="CargoItem.Category">
+                            Cargo category
+                        </label>
+                        <select asp-for="CargoItem.Group" class="govuk-select" asp-items="@Model.CargoGroup" id="CargoItem_Group">
+                            <option value="">Please Select</option>
+                            <option>Option 1</option>
+                            <option>Option 2</option>
+                            <option>Option 3</option>
+                            <option>Option 4</option>
+                        </select>
+                    </div>
+                    <div class="govuk-form-group @(((TagBuilder)Html.ValidationMessageFor(m => m.CargoItem.TotalUnits)).HasInnerHtml ? "govuk-form-group--error" :"")">
+                        <div class="govuk-form-group" id="_divNumUnits">
+                            <label class="govuk-label" asp-for="CargoItem.TotalUnits">
+                                Number of units
+                            </label>
+                            <span class="govuk-error-message" asp-validation-for=@Model.CargoItem.TotalUnits></span>
+                            <input id="CargoItem_TotalUnits" asp-for="@Model.CargoItem.TotalUnits" class="govuk-input">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group @(((TagBuilder)Html.ValidationMessageFor(m => m.CargoItem.UnitsWithCargo)).HasInnerHtml ? "govuk-form-group--error" :"")">
+                        <div class="govuk-form-group" id="_divUnitsWithCargo">
+                            <label class="govuk-label" asp-for="CargoItem.UnitsWithCargo">
+                                Number of units with cargo
+                            </label>
+                            <span class="govuk-hint">Freight vehicles or containers that are transporting goods​</span>
+                            <span class="govuk-error-message" asp-validation-for=@Model.CargoItem.UnitsWithCargo></span>
+                            <input id="CargoItem_UnitsWithCargo" asp-for="@Model.CargoItem.UnitsWithCargo" class="govuk-input">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group @(((TagBuilder)Html.ValidationMessageFor(m => m.CargoItem.UnitsWithoutCargo)).HasInnerHtml ? "govuk-form-group--error" :"")">
+                        <div class="govuk-form-group" id="_divUnitsWithoutCargo">
+                            <label class="govuk-label" asp-for="CargoItem.UnitsWithoutCargo">
+                                Number of units without cargo
+                            </label>
+                            <span class="govuk-hint">Freight vehicles or containers that are empty</span>
+                            <span class="govuk-error-message" asp-validation-for=@Model.CargoItem.UnitsWithoutCargo></span>
+                            <input id="CargoItem_UnitsWithoutCargo" asp-for="@Model.CargoItem.UnitsWithoutCargo" class="govuk-input">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group @(((TagBuilder)Html.ValidationMessageFor(m => m.CargoItem.GrossWeight)).HasInnerHtml ? "govuk-form-group--error" :"")">
+                        <div class="govuk-form-group" id="_divGrossWeightOfGoods">
+                            <label class="govuk-label" asp-for="CargoItem.GrossWeight">
+                                Gross weight of goods (tonnes)
+                            </label>
+                            <span id="_spGrossWeightHint" class="govuk-hint">
+                                Exclude the tare weight of the carrying unit
+                            </span>
+                            <span class="govuk-error-message" asp-validation-for=@Model.CargoItem.GrossWeight></span>
+                            <input type="text" id="CargoItem_GrossWeight" asp-for="@Model.CargoItem.GrossWeight" class="govuk-input">
+                        </div>
+                    </div>
+                    <div class="govuk-form-group @(((TagBuilder)Html.ValidationMessageFor(m => m.CargoItem.Description)).HasInnerHtml ? "govuk-form-group--error" : "")" id="_divDescription">
+                        <label class="govuk-label" asp-for="CargoItem.Description">
+                            Cargo description
+                        </label>
+                        <span id="Description-hint" class="govuk-hint">
+                            Enter your own description of what the cargo was, including how it was transported onto the ship,
+                            for example "fertiliser in bags" or "cement in bulk". This can help us resolve reporting discrepancies.
+                        </span>
+                        <span class="govuk-error-message" asp-validation-for=@Model.CargoItem.Description></span>
+                        <textarea id="CargoItem_Description" class="govuk-textarea" rows="5" aria-describedby="Description-hint" asp-for="@Model.CargoItem.Description"></textarea>
+                    </div>
+                    <div id="divAddCargoItem">
+                        <p class="govuk-body">
+                            <a href="addnewcargopage2" class="govuk-link">
+                              Add additional cargo
+                            </a>
+                            </p>
+                    </div>
+                    <div>
+                       
+                    
+                    </div>
+                    <br /><br />
+                    <div id="divContinueCargoItem" class="govuk-form-group">
+                        <button type="submit" id="continueCargoItem" value="Continue" style="float:left;" asp-page-handler="Continue" class="govuk-button">
+                            Continue
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+{% endblock %}
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+       
+$(document).ready(function () {
+    hideTextInputs();
+
+    if (isEditMode === 'True') {
+        showRelevantInputs(textInputDisplayDriver);
+
+        ddl = $("#CargoItem_Category");
+        if (ddl[0][0].value === "") {
+            ddl[0][0].parentNode.removeChild(ddl[0][0]);
+        }
+
+        ddl = $("#CargoItem_Group");
+        if (ddl[0][0].value === "") {
+            ddl[0][0].parentNode.removeChild(ddl[0][0]);
+        }
+    }
+    else {
+        $('#CargoItem_Category').prop('disabled', true);
+    }
+
+    $("#divAddCargoItem").children().hide();
+    $("#divSkipPage").children().hide();
+
+    if ($('#CargoItem_Group').val() != '' && $('#CargoItem_Category').val() != '') {
+        $("#divAddCargoItem").children().show();
+        $("#divSkipPage").children().show();
+    }
+
+    $('#CargoItem_Group').change(updateAddEnabled);
+    $('#CargoItem_Category').change(updateAddEnabled);
+
+});
+
+function updateAddEnabled() {
+    if (verifyAdSettings()) {
+        $("#divAddCargoItem").children().show();
+    } else {
+        $("#divAddCargoItem").children().hide();
+    }
+    if ($('#CargoItem_Group').val() != '') {
+        $("#divSkipPage").children().show();
+    }
+    else {
+        $("#divSkipPage").children().hide();
+    }
+}
+
+function verifyAdSettings() {
+    if ($('#CargoItem_Group').val() != '' && $('#CargoItem_Category').val() != '') {
+        return true;
+    } else {
+        return false
+    }
+}
+
+function SuccessFunc(data, status, jqXHR) {
+
+    //Remove "Select Options" entry from ddl if it is still there. It is the only one with an empty value property
+    ddl = $("#CargoItem_Group");
+    if (ddl[0][0].value === "") {
+        ddl[0][0].parentNode.removeChild(ddl[0][0]);
+    }
+    $('#CargoItem_Category').prop('disabled', false);
+    $('#CargoItem_Category').empty();
+
+
+    $('#CargoItem_Category').append($('<option></option>').val('').text('Please Select'));
+    $.each(data, function (i, item) {
+        $('#CargoItem_Category').append($('<option></option>').val(item.value).text(item.text));
+    });
+}
+
+function showRelevantInputs(data) {
+    if (data.indexOf("Weight") >= 0) {
+        $('#_divGrossWeightOfGoods').show();
+    }
+
+    if (data.indexOf("NoCargo") >= 0) {
+        $('#_divNumUnits').show();
+    }
+
+    else if (data.indexOf("Cargo") >= 0) {
+
+        $('#_divUnitsWithCargo').show();
+        $('#_divUnitsWithoutCargo').show();
+    }
+
+    $('#_divDescription').show();
+}
+function SuccessFuncUi(data, status, jqXHR) {
+
+    //Remove "Please Select" entry from ddl if it is still there. It is the only one with an empty value property
+    ddl = $("#CargoItem_Category");
+    if (ddl[0][0].value === "") {
+        ddl[0][0].parentNode.removeChild(ddl[0][0]);
+    }
+    showRelevantInputs(data);
+}
+
+function hideTextInputs() {
+    $('#_divNumUnits').hide();
+    $('#_divUnitsWithCargo').hide();
+    $('#_divUnitsWithoutCargo').hide();
+    $('#_divGrossWeightOfGoods').hide();
+    $('#_divDescription').hide();
+}
+
+function clearTextInputs() {
+    $('#CargoItem_TotalUnits').val("");
+    $('#CargoItem_UnitsWithCargo').val("");
+    $('#CargoItem_UnitsWithoutCargo').val("");
+    $('#CargoItem_GrossWeight').val("");
+    $('#CargoItem_Description').val("");
+}
+
+$("#CargoItem_Group").change(function () {
+    if ($('#CargoItem_Group').val() === "") {
+        return false;
+    }
+    hideTextInputs();
+    clearTextInputs();
+    ajaxGetWithData('?handler=CargoCategories', $('#CargoItem_Group').val(), SuccessFunc, null, null, null, null);
+});
+
+$("#CargoItem_Category").change(function () {
+    hideTextInputs();
+    clearTextInputs();
+    ajaxGetWithData('?handler=UiFormat', $('#CargoItem_Category').val(), SuccessFuncUi, null, null, null, null);
+});
+
+function ajaxGetWithData(url, data, success, error, beforeSend, complete) {
+    ajaxCall(url, data, "GET", success, error, beforeSend, complete, false);
+}
+
+function ajaxCall(url, data, type, success, error, beforeSend, complete, synchronous) {
+    $.ajax(url, {
+        data: { input: data },
+        type: type,
+        async: !synchronous,
+        dataType: "json",
+        contentType: "application/json",
+        cache: false,
+        beforeSend: function (jqXHR, settings) {
+            if (beforeSend) {
+                beforeSend(jqXHR, settings);
+            }
+        },
+        success: function (data, textStatus, jqXHR) {
+            if (success) {
+                success(data, textStatus, jqXHR);
+            }
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            if (error) {
+                error(jqXHR, textStatus, errorThrown);
+            } else {
+                alert("Problem with AJAX call");
+            }
+        },
+        complete: function (jqXHR, textStatus) {
+            if (complete) {
+                complete(jqXHR, textStatus);
+            }
+        }
+    });
+}
+
+    </script>
